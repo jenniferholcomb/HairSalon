@@ -36,16 +36,14 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Dictionary<List<client>, object> dictStylist = new Dictionary<List<client>, object>();
-      List<Client> model = _db.Clients
-                              .Include(client => client.Stylist)
-                              .OrderBy(client => client.Name)
-                              .ToList();
+      // Dictionary<string, object> model = new Dictionary<string, object>();
+      // List<Client> thisClients = _db.Clients.OrderBy(client => client.Name).ToList();
 
-      Stylist thisStylist = _db.Stylists
-                               .Include(model)
-                               .FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisStylist);
+      Stylist model = _db.Stylists.Include(stylist => stylist.Clients)
+                                  .FirstOrDefault(stylist => stylist.StylistId == id);
+      // model.Add("stylist", thisStylist);
+      // model.Add("clients", thisClients);
+      return View(model);
     }
   }
 }
