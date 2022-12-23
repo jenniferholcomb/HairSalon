@@ -9,8 +9,8 @@
 <ul>
   @foreach (Client client in Model)
   {
-    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | 
-        @Html.ActionLink($"{client.Stylist.Name}", "Details", $"{client.Stylist.StylistId}")</li>
+    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) (<em>
+        @Html.ActionLink($"{client.Stylist.Name}", "Details", "Stylists", new{ id = client.Stylist.StylistId}) </em>)</li>
   }
 </ul>
 
