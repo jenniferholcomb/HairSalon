@@ -19,5 +19,10 @@
   @Html.LabelFor(model => model.ServiceHistory)
   @Html.TextBoxFor(model => model.ServiceHistory)
 
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
   <input type="submit" value="Add new client" />
 }
+
+<p>@Html.ActionLink("Show all clients", "Index")</p>
