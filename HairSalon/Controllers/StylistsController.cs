@@ -17,7 +17,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Stylist> model = _db.Stylists.ToList();
+      List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.Name).ToList();
       return View(model);
     }
 
@@ -36,10 +36,21 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
+      Dictionary<List<client>, object> dictStylist = new Dictionary<List<client>, object>();
+      List<Client> model = _db.Clients
+                              .Include(client => client.Stylist)
+                              .OrderBy(client => client.Name)
+                              .ToList();
+
       Stylist thisStylist = _db.Stylists
-                               .Include(stylist => stylist.Clients)
+                               .Include(model)
                                .FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
   }
 }
+      // Dictionary<string, object> model = new Dictionary<string, object>();
+      // Vendor foundVendor = Vendor.Find(vendor.Id);
+      // List<Order> vendorOrders = foundVendor.OrderItems;
+      // model.Add("orders", vendorOrders);
+      // model.Add("vendor", foundVendor);
