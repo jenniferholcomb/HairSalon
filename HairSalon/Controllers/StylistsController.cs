@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
-//using System.Linq;
+using System.Linq;
 
 namespace HairSalon.Controllers
 {
