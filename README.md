@@ -21,15 +21,11 @@ This application allows salon owner to see a list of all stylists working at the
 
 ### Objectives (MVP)
 
-* Add types of animals to the system. type should be a column on the animals table. A type could be a cat, dog, bunny or any other animal.
-* Add an animal to the system. An animal should have a name, date of admittance, and breed. When it gets added to the system, it should be added as a particular type.
-* List animals by breed or type alphabetically.
-* List animals starting with the ones who have been in the shelter the longest.
+* Setup hair_salon as a schema. Stylists should be one table in our hair_salon schema. Add columns to stylists table that with columns  StylistId, Name, Specialty, SpecialtyRate.
+* Add a clients table to hair_salon schema. Clients should have columns that include StylistId, ClientId, Name, Service History, Birthday.
+* Stylists should list alphabetically.
+* Clients should list alphabetically.
 
-* Add types of animals to the system. type should be a column on the animals table. A type could be a cat, dog, bunny or any other animal.
-* Add an animal to the system. An animal should have a name, date of admittance, and breed. When it gets added to the system, it should be added as a particular type.
-* List animals by breed or type alphabetically.
-* List animals starting with the ones who have been in the shelter the longest.
 
 ![Screenshot of Databases](AnimalShelter/wwwroot/images/db.png)
 
