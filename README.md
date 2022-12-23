@@ -27,9 +27,7 @@ This application allows salon owner to see a list of all stylists working at the
 * Clients should list alphabetically.
 
 
-![Screenshot of Databases](AnimalShelter/wwwroot/images/db.png)
-
-<!-- [Link to operational site](http://www.kirstenopstad.github.com/<REPOSITORY NAME>) -->
+![Screenshot of Databases](HairSalon/wwwroot/images/db_hair_salon.png)
 
 
 ## Setup/Installation Requirements
