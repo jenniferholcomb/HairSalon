@@ -4,6 +4,7 @@
 
 @model HairSalon.Models.Client
 
+
 <p><strong>NOTE:</strong> You need to have at least one stylist before you can add a client.</p>
 <p>Go to @Html.ActionLink("this page", "Create", "Stylists") to create a stylist.</p>
 <h4>Add a new client</h4>
@@ -14,7 +15,7 @@
   @Html.TextBoxFor(model => model.Name)
 
   @Html.LabelFor(model => model.Birthday)
-  @Html.TextBoxFor(model => model.Birthday)
+  @Html.TextBoxFor(model => model.Birthday, new{ type = "date" })
 
   @Html.LabelFor(model => model.ServiceHistory)
   @Html.TextBoxFor(model => model.ServiceHistory)

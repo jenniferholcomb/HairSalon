@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MySqlConnector;
+using System;
 
 namespace HairSalon.Models
 {
@@ -7,7 +8,7 @@ namespace HairSalon.Models
   {
     public int ClientId { get; set; }
     public string Name { get; set; }
-    public string Birthday { get; set; }
+    public DateTime Birthday { get; set; }
     public string ServiceHistory { get; set; }
     public int StylistId { get; set; }
     public Stylist Stylist { get; set; }
