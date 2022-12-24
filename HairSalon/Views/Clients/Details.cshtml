@@ -10,7 +10,10 @@
     @Html.DisplayFor(model => model.Name)</h3>
 
 <h5>@Html.DisplayNameFor(model => model.Birthday) :
-    @Html.DisplayFor(model => model.Birthday)</h5>
+    @{
+      string shortBirthday = Model.Birthday.ToShortDateString();
+    }
+    @Html.DisplayFor(model => shortBirthday)</h5>
 <hr />
 
 <h5>@Html.DisplayNameFor(model => model.ServiceHistory) :

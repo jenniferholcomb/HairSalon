@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace HairSalon.Controllers
 {
@@ -49,6 +50,7 @@ namespace HairSalon.Controllers
       Client thisClient = _db.Clients
                              .Include(client => client.Stylist)
                              .FirstOrDefault(client => client.ClientId == id);
+      //ViewBag.ShortDate = thisClient.Birthday.ToShortDateString();
       return View(thisClient);
     }
   }
