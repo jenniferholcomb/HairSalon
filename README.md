@@ -21,7 +21,7 @@ This application allows salon owner to see a list of all stylists working at the
 
 ### Objectives (MVP)
 
-* Setup hair_salon as a schema. Stylists should be one table in our hair_salon schema. Add columns to stylists table that with columns  StylistId, Name, Specialty, SpecialtyRate.
+* Setup hair_salon as a schema. Stylists should be one table in our hair_salon schema. Add columns to stylists table with columns StylistId, Name, Specialty, SpecialtyRate.
 * Add a clients table to hair_salon schema. Clients should have columns that include StylistId, ClientId, Name, Service History, Birthday.
 * Stylists should list alphabetically.
 * Clients should list alphabetically.
