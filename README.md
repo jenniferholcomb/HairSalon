@@ -33,20 +33,21 @@ This application allows salon owner to see a list of all stylists working at the
 ## Setup/Installation Requirements
 
 * Clone this repo to your workspace.
-* Open MySqlWorkbench [Click here for instructions to download]
+* Open MySqlWorkbench 
   * Under Admin Tab, select Data Import/Restore
     * Select 'Import from Self Contained File'
     * Select SQL_DUMP_FILENAME
     * Change Default Target Schema to 'DB_NAME'
     * Click 'Start Import'
-* In root directoy of project, create file 'appsettings.json'
-  * add the Default Connection settings
-  * chan 
-* Navigate to program directory ``` $ cd HairSalon ```
-* Navigate to PROJECT_NAME folder & run ```$ dotnet restore ```
-* To build & run program in development mode ``` $ dotnet run ```
-* To build & run program in production mode ``` dotnet run --launch-profile "production" ```
-
+* Navigate to program directory  (Factory.Solution)
+  * add .gitignore file to this directory
+    * add bin, obj, appsettings.json to file
+    * push this file to GitHub first
+* Navigate to production directory (Factory). 
+  On command line run $ dotnet restore
+* In prooduction directory, run $ dotnet watch run in command line to  
+  start project in development mode in watcher.
+* Open brower to https://localhost:5001
 
 ## Known Bugs
 
