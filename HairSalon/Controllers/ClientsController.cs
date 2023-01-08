@@ -53,5 +53,19 @@ namespace HairSalon.Controllers
       //ViewBag.ShortDate = thisClient.Birthday.ToShortDateString();
       return View(thisClient);
     }
+
+    public ActionResult Edit(int id)
+    {
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Client client)
+    {
+      _db.Clients.Update(client);
+      _db.SaveChanges();
+      return View(client);
+    }
   }
 }

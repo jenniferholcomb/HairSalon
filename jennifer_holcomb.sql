@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.27, for macos11 (x86_64)
 --
--- Host: localhost    Database: animal_shelter
+-- Host: localhost    Database: hair_salon
 -- ------------------------------------------------------
 -- Server version	8.0.27
 
@@ -16,34 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `animals`
+-- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `animals`;
+DROP TABLE IF EXISTS `clients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `animals` (
-  `AnimalId` int NOT NULL AUTO_INCREMENT,
-  `Type` int DEFAULT NULL,
-  `Breed` varchar(255) DEFAULT NULL,
+CREATE TABLE `clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `StylistId` int DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
-  `DateAdmitted` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`AnimalId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `Birthday` datetime NOT NULL,
+  `ServiceHistory` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `types`
+-- Table structure for table `stylists`
 --
 
-DROP TABLE IF EXISTS `types`;
+DROP TABLE IF EXISTS `stylists`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `types` (
-  `TypeId` int NOT NULL AUTO_INCREMENT,
-  `Species` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`TypeId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Specialty` varchar(255) DEFAULT NULL,
+  `Rate` int DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +57,4 @@ CREATE TABLE `types` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-26  7:41:49
+-- Dump completed on 2023-01-08 14:20:51
