@@ -36,17 +36,24 @@ This application allows salon owner to see a list of all stylists working at the
 * Open MySqlWorkbench 
   * Under Admin Tab, select Data Import/Restore
     * Select 'Import from Self Contained File'
-    * Select SQL_DUMP_FILENAME
-    * Change Default Target Schema to 'DB_NAME'
+    * Select jennifer_holcomb.sql
+    * Change Default Target Schema to 'jennifer_holcomb'
     * Click 'Start Import'
-* Navigate to program directory  (Factory.Solution)
+* Navigate to program directory  (HairSalon.Solution)
   * add .gitignore file to this directory
     * add bin, obj, appsettings.json to file
     * push this file to GitHub first
-* Navigate to production directory (Factory). 
-  On command line run $ dotnet restore
-* In prooduction directory, run $ dotnet watch run in command line to  
-  start project in development mode in watcher.
+* Navigate to production directory (HairSalon)
+  * Create a file appsettings.json
+    * Add the following to appsettings.json,
+    {
+      "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=jennifer_holcomb;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+      }
+    }
+    * In appsettings.json, replace '[YOUR-USERNAME-HERE]' with your SQL username, and '[YOUR-PASSWORD-HERE]' with your SQL password
+* In production directory, on command line run $ dotnet restore.
+* In production directory, run $ dotnet watch run in command line to start project in development mode in watcher.
 * Open brower to https://localhost:5001
 
 ## Known Bugs
@@ -59,7 +66,7 @@ This application allows salon owner to see a list of all stylists working at the
 
 MIT License
 
-Copyright (c) 2022 Jennifer Holcomb
+Copyright (c) 2023 Jennifer Holcomb
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

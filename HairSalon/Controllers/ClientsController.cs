@@ -65,7 +65,7 @@ namespace HairSalon.Controllers
     {
       _db.Clients.Update(client);
       _db.SaveChanges();
-      return View(client);
+      return RedirectToAction("Details", new { id = client.ClientId });
     }
   }
 }
